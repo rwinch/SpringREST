@@ -17,11 +17,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             .authorizeRequests()
                 .antMatchers("/login").permitAll()
                 .anyRequest().authenticated()
-          .and()
+                .and()
             .formLogin()
-            .loginPage("/login")
-          .and()
-              .exceptionHandling()
+                 .loginPage("/login")
+                 .and()
+             .exceptionHandling()
                   .accessDeniedPage("/login?auth_error=true");
     }
 

@@ -80,10 +80,11 @@ public class OAuthConfig {
         @Override
         public void configure(HttpSecurity http) throws Exception {
             http
-            	.requestMatchers()
-            		.antMatchers("/flights/**")
-            	.and()
-            		.authorizeRequests().anyRequest().authenticated();
+                .requestMatchers()
+                    .antMatchers("/flights/**")
+                    .and()
+                .authorizeRequests()
+                    .anyRequest().authenticated();
         }
     }
 
