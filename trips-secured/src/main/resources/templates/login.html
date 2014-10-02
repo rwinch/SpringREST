@@ -1,7 +1,14 @@
-<h2>LOGIN</h2>
-
-<form action="/login" method="POST">
-	<label for="username">Username</label> <input type="text" name="username"/><br/>
-	<label for="password">Password</label> <input type="password" name="password"/><br/>
-	<input type="submit"/>
-</form>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Log In</title>
+	</head>
+	<body>
+		<h2>LOGIN</h2>
+		
+		<form th:action="@{/login}" method="POST">
+			<label for="username">Username</label> <input type="text" name="username"/><br/>
+			<label for="password">Password</label> <input type="password" name="password"/><br/>
+			<input type="submit"/>
+		</form>
+	</body>
+</html>
